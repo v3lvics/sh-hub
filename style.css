@@ -14,7 +14,7 @@ html,body{height:100%}
 body{margin:0;background:var(--bg);font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:var(--white);-webkit-font-smoothing:antialiased}
 
 .root{display:flex;align-items:center;justify-content:center;height:100vh;padding:24px}
-.card{width:min(720px,60%);background:var(--card);border-radius:var(--radius-lg);padding:28px 34px;box-shadow:0 8px 30px rgba(0,0,0,0.6);text-align:center;transform:translateY(10px);opacity:0;animation:cardIn 250ms ease-out forwards}
+.card{width:min(720px,55%);background:var(--card);border-radius:var(--radius-lg);padding:28px 34px;box-shadow:0 8px 30px rgba(0,0,0,0.6);text-align:center;transform:translateY(10px);opacity:0;animation:cardIn 250ms ease-out forwards}
 
 @keyframes cardIn{to{transform:translateY(0);opacity:1}}
 
