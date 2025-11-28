@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Preparing Download</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="root">
+    <section class="card" role="region" aria-label="Download preparation panel">
+      <div class="icon-wrap" aria-hidden="true">
+        <!-- circular container with download SVG -->
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24" class="download-icon" width="36" height="36" aria-hidden="true">
+            <path fill="white" d="M5 20h14v-2H5v2zm7-18L7 9h3v6h4V9h3l-5-7z" />
+          </svg>
+        </div>
+      </div>
+
+      <h1 class="title" id="title">Preparing Download</h1>
+      <p class="subtitle">
+        <span id="preparing-line">Please wait while we prepare your download<span class="ellipsis">.</span></span>
+      </p>
+      <p class="subnote"><svg class="home-ico" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="#bdbdbd" d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg> <span id="subnote-text">Preparing your download, please wait…</span></p>
+
+      <div class="progress-block">
+        <div class="progress-header">
+          <div class="label">Download Progress</div>
+          <div class="percent" id="percent">0%</div>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill" style="width:0%"></div>
+        </div>
+      </div>
+
+      <div class="security-box">
+        <div class="security-top">
+          <svg class="shield-ico" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="white" d="M12 2l7 3v5c0 5-3.8 9.7-7 11-3.2-1.3-7-6-7-11V5l7-3z"/></svg>
+          <div class="security-title">Download</div>
+        </div>
+        <p class="security-desc">Your download is protected with well security measures to ensure safe delivery.</p>
+        <div class="security-track"><div class="security-fill" id="securityFill" style="width:0%"></div></div>
+      </div>
+
+      <p class="footer-note">This download process helps us maintain the security of our files.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
