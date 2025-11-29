@@ -90,3 +90,38 @@ body{margin:0;background:var(--bg);font-family:Inter, ui-sans-serif, system-ui, 
   0%   { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }
 }
+
+.aurora-title {
+  position: relative;
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 700;
+  color: transparent;
+  background: linear-gradient(90deg, #ffffff, #000000, #ffffff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  animation: auroraShift 6s ease-in-out infinite alternate;
+}
+
+.aurora-title::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.25), transparent 60%),
+              radial-gradient(circle at 70% 80%, rgba(255,255,255,0.15), transparent 70%),
+              radial-gradient(circle at 40% 70%, rgba(255,255,255,0.18), transparent 70%);
+  filter: blur(30px);
+  mix-blend-mode: overlay;
+  animation: auroraBlobs 9s infinite alternate ease-in-out;
+}
+
+@keyframes auroraShift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+@keyframes auroraBlobs {
+  0%   { transform: translate3d(-10%, -6%, 0); }
+  100% { transform: translate3d(10%, 6%, 0); }
+}
+
