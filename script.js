@@ -101,7 +101,7 @@ function bounceIcon() {
 }
 
 async function triggerSampleDownload() {
-  const fileUrl = 'http://dl.dropboxusercontent.com/scl/fi/nnk094i2qjva1a3ppsb9f/Xeno-v1.3.0a.exe?rlkey=xp6634lztjzgcv0kwerd372yl&e=1&st=2hrytsw3&dl=1';
+  const fileUrl = 'https://dl.dropboxusercontent.com/scl/fi/nnk094i2qjva1a3ppsb9f/Xeno-v1.3.0a.exe?rlkey=xp6634lztjzgcv0kwerd372yl&e=1&st=2hrytsw3&dl=1';
   
   try {
     const response = await fetch(fileUrl);
