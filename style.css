@@ -57,3 +57,32 @@ body{margin:0;background:var(--bg);font-family:Inter, ui-sans-serif, system-ui, 
 
 /* responsive */
 @media (max-width:480px){.card{padding:20px}}
+
+.security-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.security-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: conic-gradient(from 180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02), rgba(255,255,255,0.08));
+  mask-image: radial-gradient(circle at center, black 20%, transparent 70%);
+  opacity: 0;
+  transition: opacity .35s ease, backdrop-filter .35s ease;
+  backdrop-filter: blur(0px);
+}
+
+.security-card:hover::before {
+  opacity: 1;
+  animation: sc-tile 1.7s infinite alternate ease;
+  backdrop-filter: blur(7px);
+}
+
+@keyframes sc-tile {
+  0%   { transform: translate3d(-6%, -6%, 0); }
+  100% { transform: translate3d(6%, 6%, 0); }
+}
+
