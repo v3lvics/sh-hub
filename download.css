@@ -13,8 +13,8 @@
 html,body{height:100%}
 body{margin:0;background:var(--bg);font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:var(--white);-webkit-font-smoothing:antialiased}
 
-.root{display:flex;align-items:center;justify-content:center;height:100vh;padding:24px}
-.card {   width:min(340px,100%);   background: linear-gradient(145deg, #0a0a0a, #121212, #0a0a0a);   background-size: 200% 200%;   animation: cardGradient 7s ease-in-out infinite alternate;border-radius:var(--radius-lg);padding:28px 34px;box-shadow:0 8px 30px rgba(0,0,0,0.6);text-align:center;transform:translateY(10px);opacity:0;animation:cardIn 2000ms ease-out forwards}
+.root{display:flex;align-items:center;justify-content:center;height:100vh;padding:10px}
+.card {   width:min(400px,100%);   background: linear-gradient(145deg, #0a0a0a, #121212, #0a0a0a);   background-size: 100% 100%;   animation: cardGradient 7s ease-in-out infinite alternate;border-radius:var(--radius-lg);padding:28px 34px;box-shadow:0 8px 30px rgba(0,0,0,0.6);text-align:center;transform:translateY(10px);opacity:0;animation:cardIn 2000ms ease-out forwards}
 
 @keyframes cardIn{to{transform:translateY(0);opacity:1}}
 
@@ -69,16 +69,16 @@ body{margin:0;background:var(--bg);font-family:Inter, ui-sans-serif, system-ui, 
   inset: 0;
   pointer-events: none;
   background: conic-gradient(from 180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02), rgba(255,255,255,0.08));
-  mask-image: radial-gradient(circle at center, black 20%, transparent 70%);
+  mask-image: radial-gradient(circle at center, black 10%, transparent 120%);
   opacity: 0;
   transition: opacity .35s ease, backdrop-filter .35s ease;
   backdrop-filter: blur(0px);
 }
 
 .security-card:hover::before {
-  opacity: 1;
-  animation: sc-tile 1.7s infinite alternate ease;
-  backdrop-filter: blur(7px);
+  opacity: .5;
+  animation: sc-tile 1.5s infinite alternate ease;
+  backdrop-filter: blur(2px);
 }
 
 @keyframes sc-tile {
@@ -112,7 +112,7 @@ body{margin:0;background:var(--bg);font-family:Inter, ui-sans-serif, system-ui, 
               radial-gradient(circle at 40% 70%, rgba(255,255,255,0.18), transparent 70%);
   filter: blur(30px);
   mix-blend-mode: overlay;
-  animation: auroraBlobs 9s infinite alternate ease-in-out;
+  animation: auroraBlobs 5s infinite alternate ease-in-out;
 }
 
 @keyframes auroraShift {

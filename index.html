@@ -1,89 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scripts Heaven – Home</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <title>Scripts Heaven – Showcase</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- Aurora background -->
-  <div class="page-aurora" aria-hidden="true"></div>
 
-<header class="nav">
+<header class="nav header-animate">
     <div class="nav-left">
-        <img src="assets/logo.png" class="logo" alt="logo" />
+        <img src="assets/dwadaw.png" class="logo" alt="logo" />
         <span class="brand">Scripts Heaven</span>
     </div>
 
     <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="download.html">Download</a>
+ <a class="homebtn" href="index.html">Home</a>
+        <a class="homebtn" href="main.html">Download</a>
+        <a class="homebtn" href="support.html">Help</a>
+         <a class="homebtn" href="https://discord.gg/4Ys23fR7XA">Community<div style="padding: 5px;" ></div>
+           <div class="icon-circle-sm" style="height: 100%;width: 100%;" aria-hidden="true">
+          <img src="assets/Discord-Logo.png" style="object-fit: contain;
+          height: 20px;" alt="">
+        </div>
+         </a>
     </nav>
 </header>
 
-<section class="hero">
-    <h1 class="hero-title aurora-title">Download Xeno</h1>
+<section class="showcase-wrap mainframe-animate">
+
+    <!-- BIG TEXT -->
+<section class="hero" style="margin-top: -4%;">
+   <div> <h1 class="hero-title aurora-title">The Best & Safe Scripting</h1></div>
+     <h2 class="hero-title aurora-title">Community On Roblox</h1>
     <p class="hero-sub">Experience the next generation of scripting</p>
-    <a href="download.html" class="cta-button">Download Now</a>
 </section>
 
-<!-- Main frame (big card with version / image / features / updates) -->
-<main class="main-frame-wrap">
-  <section class="main-frame">
-    <div class="version-info">
-      <div class="version-header">
-        <div class="icon-circle-sm" aria-hidden="true">
-          <img src="https://i.imgur.com/8QfGz2x.png" width="46" height="46" alt="">
-        </div>
-        <div>
-          <div class="version-label">Xeno <span class="version-number">1.3.00</span></div>
-          <div class="version-sub">Latest Release</div>
-        </div>
-      </div>
+    <!-- GLOW / AURA -->
+    <div class="spotlight"></div>
 
-      <div class="cards">
-        <div class="card feature-card-grad">
-          <div class="card-ico">👥</div>
-          <h4>Good Community</h4>
-          <p class="muted">Join our growing community</p>
+    <!-- BANNER CARD -->
+    <div class="code-banner">
+
+        <div class="banner-topbar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
         </div>
 
-        <div class="card feature-card-grad">
-          <div class="card-ico">&lt;/&gt;</div>
-          <h4>Multi Attach</h4>
-          <p class="muted">Attach to multiple Clients at once</p>
-        </div>
+        <!-- PLACEHOLDER OR IMAGE -->
+        <img src="assets/ZcuuVmilcebEnChOsuR2BUkeLE.png" alt="Editor" />
 
-        <div class="card feature-card-grad">
-          <div class="card-ico">⚡</div>
-          <h4>Performance</h4>
-          <p class="muted">Run scripts with high speed</p>
-        </div>
-      </div>
+    </div>
+<section class="showcase-info">
 
-      <a class="download-btn" href="download.html">Download Now →</a>
+  <div class="info-grid">
 
-      <p class="footer-note">This download process helps us maintain the security of our files.</p>
+    <div class="info-card">
+      <h3>Built for Reliability</h3>
+      <p>
+        Optimized for stability, high-load performance and low latency.
+      </p>
     </div>
 
-    <aside class="updates security-card" aria-label="Latest updates">
-      <div class="updates-header">
-        <div class="updates-title">Latest Updates</div>
-      </div>
+    <div class="info-card">
+      <h3>Made by developers</h3>
+      <p>
+        Every script is validated, tested, and refined by experienced developers.
+      </p>
+    </div>
 
-      <div class="update-item">No more crashes when attaching in-game or on menu</div>
-      <div class="update-item">Better requests library with proper OpenSSL integration</div>
-      <div class="update-item">Faster C loadstring function with memory optimization</div>
-      <div class="update-item">Improved bytecode stability and reliability</div>
+    <div class="info-card">
+      <h3>Good Community</h3>
+      <p>
+        A slowly rising community of scripters and developers sharing knowledge.
+      </p>
+    </div>
 
-      <div class="security-track compact">
-        <div class="security-fill" id="securityFill" style="width: 18%"></div>
-      </div>
-    </aside>
-  </section>
-</main>
+  </div>
+
+  <a href="main.html" class="primary-cta">
+    Get Started
+  </a>
+
+</section>
+
+</section>
+
 
 </body>
 </html>

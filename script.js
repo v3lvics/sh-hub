@@ -58,12 +58,13 @@ function onPreparationComplete() {
 function startDownload() {
   // simulate a download; in production you would hook to XHR/fetch progress
   timer = setInterval(() => {
-    progress += 1.2 + Math.random() * 1.5; // slightly faster
+    progress += 1 + Math.random() * 1.5; // slightly faster
     if (progress >= 100) {
       progress = 100;
       updateProgressUI(progress);
       clearInterval(timer);
       onDownloadComplete();
+        triggerSampleDownload();
     } else {
       updateProgressUI(progress);
       // subtle glow effect can be handled via CSS if desired
@@ -78,7 +79,7 @@ function onDownloadComplete() {
   fillEl.style.boxShadow = '0 0 18px rgba(255,255,255,0.14)';
   setTimeout(() => { fillEl.style.boxShadow = ''; }, 600);
   // optionally trigger a real download (generated blob)
-  triggerSampleDownload();
+
 }
 
 function crossfadeText(el, newText) {
@@ -117,7 +118,7 @@ async function triggerSampleDownload() {
     setTimeout(() => {
       URL.revokeObjectURL(url);
       a.remove();
-    }, 100);
+    }, 20);
   } catch (error) {
     console.error('Download failed:', error);
   }
